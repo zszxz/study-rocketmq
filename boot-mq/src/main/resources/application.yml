@@ -1,0 +1,13 @@
+server:
+  port: 8085
+rocketmq:
+  #nameservice服务器地址（多个以英文逗号隔开）
+  name-server: 127.0.0.1:9876
+  producer:
+    group: test1
+    send-message-timeout: 3000
+    compress-message-body-threshold: 4096
+    max-message-size: 4194304
+    retry-times-when-send-failed: 3
+    retry-next-server: true
+    retry-times-when-send-async-failed: 3
